@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Facturación</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.table{
+    margin:40px;
+    background:#0b1220;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:2fr 2fr 1fr 1fr 1fr;
+    padding:15px 20px;
+    border-bottom:1px solid #111831;
+}
+
+.row.header{
+    background:#111831;
+    color:#9aa3c7;
+}
+.status.active{color:#3cffb0}
+.status.late{color:#ff4d4d}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Facturación</h1>
+    <a href="/superadmin/dashboard.html" style="color:#3cffb0;">← Volver</a>
+</div>
+
+<div class="table">
+    <div class="row header">
+        <div>Gym</div>
+        <div>Plan</div>
+        <div>Precio</div>
+        <div>Estado</div>
+        <div>Vence</div>
+    </div>
+
+    <div class="row">
+        <div>PowerGym</div>
+        <div>Pro</div>
+        <div>$49</div>
+        <div class="status active">Activo</div>
+        <div>30/01</div>
+    </div>
+
+    <div class="row">
+        <div>FitPeople</div>
+        <div>Basic</div>
+        <div>$29</div>
+        <div class="status late">Vencido</div>
+        <div>05/01</div>
+    </div>
+</div>
+
+</body>
+</html>

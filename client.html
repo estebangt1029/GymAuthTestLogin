@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth – Cliente</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:#020617;
+  color:white;
+}
+
+header{
+  background:#020617;
+  padding:20px 40px;
+  border-bottom:1px solid #1e293b;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:#38bdf8;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px;
+}
+
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:25px;
+  margin-bottom:25px;
+  box-shadow:0 0 20px rgba(56,189,248,.05);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+h2{
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+.stat{
+  font-size:26px;
+  font-weight:700;
+}
+
+.good{ color:#22c55e }
+.bad{ color:#ef4444 }
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:12px;
+  border-bottom:1px solid #1e293b;
+  text-align:left;
+}
+
+.graph{
+  height:250px;
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GymAuth</div>
+</header>
+
+<div class="container">
+
+  <!-- PERFIL -->
+  <div class="card">
+    <h2>Perfil del Cliente</h2>
+    <div class="grid">
+      <div>Nombre<br><b id="name">Ana</b></div>
+      <div>Email<br><b id="email">ana@gmail.com</b></div>
+      <div>Objetivo<br><b id="goal">Perder grasa</b></div>
+      <div>Estado<br><b class="good" id="status">En progreso</b></div>
+    </div>
+  </div>
+
+  <!-- KPIS -->
+  <div class="grid">
+    <div class="card">
+      Peso inicial
+      <div class="stat" id="start">78 kg</div>
+    </div>
+    <div class="card">
+      Peso actual
+      <div class="stat" id="current">72 kg</div>
+    </div>
+    <div class="card">
+      Cambio total
+      <div class="stat good" id="change">-6 kg</div>
+    </div>
+    <div class="card">
+      Meses activos
+      <div class="stat" id="months">3</div>
+    </div>
+  </div>
+
+  <!-- GRAFICO -->
+  <div class="card">
+    <h2>Progreso</h2>
+    <div class="graph">
+      Gráfico de peso por mes
+    </div>
+  </div>
+
+  <!-- HISTORIAL -->
+  <div class="card">
+    <h2>Historial</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Peso</th>
+          <th>Cambio</th>
+        </tr>
+      </thead>
+      <tbody id="history">
+        <tr><td>01 Ene</td><td>78kg</td><td>–</td></tr>
+        <tr><td>01 Feb</td><td>75kg</td><td>-3kg</td></tr>
+        <tr><td>01 Mar</td><td>72kg</td><td>-3kg</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MENSAJES -->
+  <div class="card">
+    <h2>Mensajes enviados</h2>
+    <table>
+      <tr><td>02 Feb</td><td>Email motivacional</td></tr>
+      <tr><td>10 Feb</td><td>Felicitación</td></tr>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

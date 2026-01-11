@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth – Registro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:linear-gradient(120deg,#020617,#0f172a);
+  color:white;
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:20px;
+  padding:40px;
+  width:100%;
+  max-width:400px;
+  box-shadow:0 0 30px rgba(56,189,248,.1);
+  text-align:center;
+}
+
+h1{
+  margin-bottom:10px;
+  color:#38bdf8;
+}
+
+input{
+  width:100%;
+  padding:14px;
+  margin:12px 0;
+  border-radius:10px;
+  border:none;
+  background:#0f172a;
+  color:white;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:#38bdf8;
+  border:none;
+  border-radius:12px;
+  margin-top:15px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+#msg{
+  margin-top:15px;
+  color:#f87171;
+}
+
+a{
+  color:white;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>GymAuth</h1>
+  <p>Crear tu gimnasio</p>
+
+  <input id="gym" placeholder="Nombre del gimnasio">
+  <input id="email" placeholder="Correo administrador">
+  <input id="pass" type="password" placeholder="Contraseña">
+  <input id="pass2" type="password" placeholder="Confirmar contraseña">
+
+  <button onclick="register()">Crear cuenta</button>
+
+  <a href="../index.html">Volver</a>
+  <div id="msg"></div>
+</div>
+
+<script>
+function register(){
+
+  if(pass.value !== pass2.value){
+    msg.innerText="Las contraseñas no coinciden"
+    return
+  }
+
+  fetch("TU_WEBHOOK_REGISTER",{
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body:JSON.stringify({
+      gym_name: gym.value,
+      email: email.value,
+      password: pass.value
+    })
+  })
+  .then(r=>r.json())
+  .then(d=>{
+    if(d.status=="ok"){
+      window.location.href="../login/login.html?gym="+d.gym_slug
+    }else{
+      msg.innerText = d.error || "Error al crear cuenta"
+    }
+  })
+}
+</script>
+
+</body>
+</html>

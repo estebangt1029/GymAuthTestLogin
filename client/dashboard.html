@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Mi Progreso</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.menu a{
+    margin-left:25px;
+    color:#9aa3c7;
+    text-decoration:none;
+}
+
+.menu a:hover{
+    color:#3cffb0;
+}
+
+.cards{
+    padding:40px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0b1220;
+    padding:25px;
+    border-radius:12px;
+}
+
+.card h2{
+    color:#3cffb0;
+    font-size:28px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Mi progreso</h1>
+    <div class="menu">
+        <a href="/client/progress.html">Registrar</a>
+        <a href="/client/workouts.html">Rutinas</a>
+        <a href="/client/ranking.html">Ranking</a>
+        <a href="/client/profile.html">Perfil</a>
+        <a href="/auth/logout.html">Salir</a>
+    </div>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h2>78kg</h2>
+        <span>Peso actual</span>
+    </div>
+    <div class="card">
+        <h2>-6kg</h2>
+        <span>Progreso</span>
+    </div>
+    <div class="card">
+        <h2>14</h2>
+        <span>Días seguidos</span>
+    </div>
+</div>
+
+</body>
+</html>

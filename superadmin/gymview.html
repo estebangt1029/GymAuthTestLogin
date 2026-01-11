@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Gym</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.btn{
+    padding:10px 20px;
+    border-radius:8px;
+    border:none;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn.green{
+    background:#3cffb0;
+}
+
+.btn.red{
+    background:#ff5b5b;
+    color:white;
+}
+
+.section{
+    padding:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0b1220;
+    padding:25px;
+    border-radius:12px;
+}
+
+.card h2{
+    color:#3cffb0;
+    margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>PowerGym</h1>
+    <div>
+        <button class="btn green">Activar</button>
+        <button class="btn red">Suspender</button>
+    </div>
+</div>
+
+<div class="section">
+    <div class="grid">
+        <div class="card">
+            <h2>128</h2>
+            <span>Clientes activos</span>
+        </div>
+        <div class="card">
+            <h2>42%</h2>
+            <span>Retención</span>
+        </div>
+        <div class="card">
+            <h2>$159</h2>
+            <span>Pago mensual</span>
+        </div>
+        <div class="card">
+            <h2>Activo</h2>
+            <span>Estado</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

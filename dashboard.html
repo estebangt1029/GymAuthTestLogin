@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth – Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:#020617;
+  color:white;
+}
+
+header{
+  background:#020617;
+  padding:20px 40px;
+  border-bottom:1px solid #1e293b;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:#38bdf8;
+}
+
+.logout{
+  background:#ef4444;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+}
+
+.container{
+  padding:30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 0 25px rgba(56,189,248,.05);
+}
+
+.card h3{
+  margin:0;
+  color:#94a3b8;
+  font-weight:500;
+  font-size:14px;
+}
+
+.card p{
+  margin-top:10px;
+  font-size:32px;
+  font-weight:700;
+  color:#38bdf8;
+}
+
+.section{
+  margin-top:40px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th,td{
+  padding:14px;
+  text-align:left;
+}
+
+th{
+  color:#94a3b8;
+  font-size:14px;
+  border-bottom:1px solid #1e293b;
+}
+
+td{
+  border-bottom:1px solid #020617;
+}
+
+.bad{
+  color:#ef4444;
+}
+.good{
+  color:#22c55e;
+}
+
+.graph{
+  height:250px;
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#94a3b8;
+  margin-top:20px;
+}
+
+.alert{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 0 20px rgba(239,68,68,.05);
+}
+
+.alert.good{
+  border-color:#22c55e;
+  color:#22c55e;
+}
+
+.alert.bad{
+  border-color:#ef4444;
+  color:#ef4444;
+}
+
+.filter{
+  background:#020617;
+  border:1px solid #1e293b;
+  color:white;
+  padding:10px 16px;
+  border-radius:10px;
+  margin-right:10px;
+  cursor:pointer;
+}
+
+.filter:hover{
+  border-color:#38bdf8;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GymAuth</div>
+  <button class="logout" onclick="logout()">Cerrar sesión</button>
+</header>
+
+<div class="container">
+
+   
+
+
+
+  <!-- Gráfico -->
+   <div class="section">
+<h2>Alertas Inteligentes</h2>
+
+<div class="kpis">
+    <div class="card" style="border-color:#ef4444">
+    ⚠️ 236 clientes activos
+  </div>
+    <div class="card" style="border-color:#44e4ef">
+    ⚠️ 6 clientes nuevos este mes
+  </div>
+  <div class="card" style="border-color:#ef4444">
+    ⚠️ 6 clientes están en riesgo
+  </div>
+
+  <div class="card" style="border-color:#22c55e">
+    🏆 18 clientes mejoraron este mes
+  </div>
+
+  <div class="card" style="border-color:#38bdf8">
+    📈 El 72% de tus clientes progresa
+  </div>
+</div>
+
+<div class="section">
+  <h2>Comparación mensual</h2>
+
+  <div class="kpis">
+    <div class="card">
+      <h3>Este mes</h3>
+      <p id="thisMonth">128</p>
+    </div>
+
+    <div class="card">
+      <h3>Mes pasado</h3>
+      <p id="lastMonth">113</p>
+    </div>
+
+    <div class="card">
+      <h3>Crecimiento</h3>
+      <p id="growth">+15 (13%)</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+  <div class="section">
+    <h2>Progreso del Gym</h2>
+    <div class="graph">
+  <div style="text-align:center">
+    <h3 style="margin:0;color:#38bdf8">Progreso promedio</h3>
+    <p style="color:#94a3b8">Últimos 30 días</p>
+    <p style="font-size:40px;margin-top:20px">⬆️ 8.2%</p>
+  </div>
+</div>
+
+  </div>
+
+<div class="section">
+<h2>Actividad reciente</h2>
+
+<table>
+<tr><td>Ana perdió 2kg</td><td>Hoy</td></tr>
+<tr><td>Juan ganó 1kg</td><td>Ayer</td></tr>
+<tr><td>Correo enviado a Luis</td><td>Hace 2 días</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Automatizaciones</h2>
+
+<div class="kpis">
+  <div class="card">📩 Emails motivacionales: 🟢</div>
+  <div class="card">📅 Recordatorios mensuales: 🟢</div>
+  <div class="card">⚠️ Alertas de riesgo: 🟢</div>
+</div>
+</div>
+
+
+
+  <!-- Tabla -->
+  <div class="section">
+    <h2>Clientes</h2>
+    <div style="margin-bottom:20px;">
+  <button class="filter" onclick="filterClients('all')">Todos</button>
+  <button class="filter" onclick="filterClients('good')">🟢 En progreso</button>
+  <button class="filter" onclick="filterClients('bad')">🔴 En riesgo</button>
+  <button class="filter" onclick="filterClients('new')">🆕 Nuevos</button>
+</div>
+
+    <table>
+      <thead>
+        <tr>
+  <th>Nombre</th>
+  <th>Objetivo</th>
+  <th>Peso</th>
+  <th>Cambio</th>
+  <th>Estado</th>
+  <th>Acción</th>
+</tr>
+
+      </thead>
+      <tbody id="table">
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+const gym_id = new URLSearchParams(window.location.search).get("gym");
+
+
+
+
+
+function filterClients(type){
+  document.querySelectorAll("#table tr").forEach(row=>{
+    if(type=="all"){
+      row.style.display=""
+    }else{
+      row.style.display = row.dataset.status==type ? "" : "none"
+    }
+  })
+}
+
+const fakeUsers = [
+ {name:"Ana", goal:"Perder grasa", weight:72, diff:"-2kg", status:"good", email:"ana@gmail.com"},
+ {name:"Juan", goal:"Ganar músculo", weight:80, diff:"+1kg", status:"good", email:"juan@gmail.com"},
+ {name:"Luis", goal:"Perder grasa", weight:95, diff:"+1kg", status:"bad", email:"luis@gmail.com"},
+ {name:"Carla", goal:"Perder grasa", weight:68, diff:"-1kg", status:"good", email:"carla@gmail.com"},
+ {name:"Pedro", goal:"Ganar músculo", weight:76, diff:"-1kg", status:"bad", email:"pedro@gmail.com"}
+]
+
+fakeUsers.forEach(u=>{
+  table.innerHTML += `
+    <tr data-status="${u.status}">
+      <td>${u.name}</td>
+      <td>${u.goal}</td>
+      <td>${u.weight} kg</td>
+      <td class="${u.status=='good'?'good':'bad'}">${u.diff}</td>
+      <td>${u.status=='good'?'🟢':'🔴'}</td>
+      <td>
+        <button onclick="openClient('${u.email}')" style="padding:8px 12px;border-radius:8px;border:none;background:#38bdf8;color:black;cursor:pointer;">
+          Ver perfil
+        </button>
+      </td>
+    </tr>
+  `
+})
+
+
+
+function openClient(email){
+  window.location.href = "../client/client.html?email=" + email
+}
+
+</script>
+
+</body>
+</html>

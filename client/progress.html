@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Registrar Progreso</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.form{
+    padding:40px;
+    max-width:600px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    background:#111831;
+    border:none;
+    border-radius:8px;
+    color:white;
+}
+
+button{
+    padding:14px 30px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,#00f0ff,#3cffb0);
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Registrar progreso</h1>
+    <a href="/client/dashboard.html" style="color:#3cffb0;">← Volver</a>
+</div>
+
+<div class="form">
+    <input type="number" placeholder="Peso actual (kg)">
+    <input type="number" placeholder="Grasa corporal (%)">
+    <input type="number" placeholder="Entrenamientos esta semana">
+    <input type="number" placeholder="Horas de cardio">
+    <button onclick="sendProgress()">Guardar progreso</button>
+
+</div>
+
+<script>
+function sendProgress(){
+fetch("https://estebanmoreno.app.n8n.cloud/webhook-test/gymauth/progress",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({
+        peso: document.querySelectorAll("input")[0].value,
+        grasa: document.querySelectorAll("input")[1].value,
+        entrenos: document.querySelectorAll("input")[2].value,
+        cardio: document.querySelectorAll("input")[3].value,
+        client_id: localStorage.getItem("client_id")
+    })
+})
+.then(r=>alert("Progreso guardado 🔥"))
+}
+</script>
+
+</body>
+</html>

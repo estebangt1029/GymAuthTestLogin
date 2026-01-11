@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | SuperAdmin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h1{
+    color:#3cffb0;
+    font-size:24px;
+}
+
+.menu a{
+    color:#9aa3c7;
+    margin-left:30px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:#3cffb0;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:#0b1220;
+    padding:25px;
+    border-radius:12px;
+}
+
+.card h2{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#3cffb0;
+}
+
+.card span{
+    color:#9aa3c7;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>GymAuth — SuperAdmin</h1>
+    <div class="menu">
+        <a href="/superadmin/gyms.html">Gimnasios</a>
+        <a href="/superadmin/billing.html">Pagos</a>
+        <a href="/superadmin/settings.html">Configuración</a>
+        <a href="/auth/logout.html">Salir</a>
+    </div>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h2 id="gyms">0</h2>
+        <span>Gimnasios activos</span>
+    </div>
+    <div class="card">
+        <h2 id="clients">0</h2>
+        <span>Clientes totales</span>
+    </div>
+    <div class="card">
+        <h2 id="income">$0</h2>
+        <span>Ingresos mensuales</span>
+    </div>
+    <div class="card">
+        <h2 id="suspended">0</h2>
+        <span>Gimnasios suspendidos</span>
+    </div>
+</div>
+
+<script>
+// Esto luego lo conectamos a n8n
+document.getElementById("gyms").innerText = "12";
+document.getElementById("clients").innerText = "845";
+document.getElementById("income").innerText = "$2,340";
+document.getElementById("suspended").innerText = "1";
+</script>
+
+</body>
+</html>

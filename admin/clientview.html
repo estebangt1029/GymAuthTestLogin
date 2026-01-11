@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Cliente</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.section{
+    padding:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0b1220;
+    padding:25px;
+    border-radius:12px;
+}
+
+.card h2{
+    color:#3cffb0;
+    font-size:26px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Juan Pérez</h1>
+    <a href="/admin/clients.html" style="color:#3cffb0;">← Volver</a>
+</div>
+
+<div class="section">
+    <div class="grid">
+        <div class="card">
+            <h2>78kg</h2>
+            <span>Peso actual</span>
+        </div>
+        <div class="card">
+            <h2>-6kg</h2>
+            <span>Cambio</span>
+        </div>
+        <div class="card">
+            <h2>Activo</h2>
+            <span>Estado</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

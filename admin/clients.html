@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Clientes</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.btn{
+    padding:10px 20px;
+    border-radius:8px;
+    background:linear-gradient(90deg,#00f0ff,#3cffb0);
+    border:none;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.table{
+    margin:40px;
+    background:#0b1220;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr 1fr;
+    padding:15px 20px;
+    border-bottom:1px solid #111831;
+    align-items:center;
+}
+
+.row.header{
+    background:#111831;
+    color:#9aa3c7;
+    font-size:13px;
+}
+
+.status.active{color:#3cffb0;}
+.status.risk{color:#ffc107;}
+.status.inactive{color:#ff5b5b;}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Clientes</h1>
+    <button class="btn">+ Nuevo Cliente</button>
+</div>
+
+<div class="table">
+    <div class="row header">
+        <div>Nombre</div>
+        <div>Peso</div>
+        <div>Última visita</div>
+        <div>Estado</div>
+        <div>Acciones</div>
+    </div>
+
+    <div class="row">
+        <div>Juan Pérez</div>
+        <div>78kg</div>
+        <div>Hace 2 días</div>
+        <div class="status active">Activo</div>
+        <div><button class="btn">Ver</button></div>
+    </div>
+
+    <div class="row">
+        <div>Ana Gómez</div>
+        <div>65kg</div>
+        <div>Hace 8 días</div>
+        <div class="status risk">En riesgo</div>
+        <div><button class="btn">Ver</button></div>
+    </div>
+
+    <div class="row">
+        <div>Carlos Ruiz</div>
+        <div>90kg</div>
+        <div>Hace 15 días</div>
+        <div class="status inactive">Inactivo</div>
+        <div><button class="btn">Ver</button></div>
+    </div>
+</div>
+
+</body>
+</html>

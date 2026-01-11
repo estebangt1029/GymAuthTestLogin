@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Plataforma de automatización para gimnasios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:#020617;
+  color:white;
+}
+
+a{color:#38bdf8;text-decoration:none}
+
+header{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(2,6,23,.9),rgba(2,6,23,.9)),
+    url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.hero{
+  max-width:900px;
+  text-align:center;
+}
+
+h1{
+  font-size:3.2em;
+  line-height:1.1;
+}
+
+p{
+  color:#cbd5f5;
+  font-size:1.1em;
+}
+
+.btn{
+  background:#38bdf8;
+  border:none;
+  padding:16px 40px;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+  margin:10px;
+}
+
+.outline{
+  background:transparent;
+  border:2px solid #38bdf8;
+  color:#38bdf8;
+}
+
+section{
+  padding:90px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 0 25px rgba(56,189,248,.05);
+}
+
+.card h3{
+  color:#38bdf8;
+  margin-top:0;
+}
+
+.badge{
+  display:inline-block;
+  background:#38bdf8;
+  color:black;
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+footer{
+  background:#020617;
+  color:#64748b;
+  text-align:center;
+  padding:60px 20px;
+}
+
+
+.gymauth-logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #00f0ff, #3cffb0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px rgba(60,255,176,0.25);
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  
+  <div class="hero">
+  <h1 class="gymauth-logo">GymAuth</h1>
+
+    <h1>Convierte tu gimnasio en una <span style="color:#38bdf8">máquina de resultados</span></h1>
+    <p>
+      GymAuth automatiza el seguimiento de clientes, envía reportes de progreso y genera motivación automática para que tus alumnos no abandonen.
+    </p>
+    <button class="btn outline" onclick="location.href='auth/login.html'">Iniciar sesión</button>
+  </div>
+</header>
+
+<section>
+  <h2>El problema de todos los gimnasios</h2>
+  <p>
+    La mayoría de los clientes abandona porque nadie los sigue.
+    No ven resultados, no reciben motivación y se sienten olvidados.
+  </p>
+
+  <h2>GymAuth lo soluciona</h2>
+  <p>
+    Nuestro sistema automatiza el proceso: peso, objetivos, progreso, estadísticas y mensajes motivacionales generados con inteligencia artificial.
+  </p>
+</section>
+
+<section>
+  <div class="grid">
+    <div class="card">
+      <h3>📊 Seguimiento inteligente</h3>
+      <p>Los clientes registran su peso y el sistema calcula automáticamente su evolución mensual.</p>
+    </div>
+
+    <div class="card">
+      <h3>📩 Correos automáticos</h3>
+      <p>Cada mes tus clientes reciben un reporte con su progreso y un mensaje motivacional personalizado.</p>
+    </div>
+
+    <div class="card">
+      <h3>📈 Panel del gimnasio</h3>
+      <p>Visualiza todos tus clientes, estadísticas, progreso y retención en tiempo real.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Accesos por gimnasio</h3>
+      <p>Cada gimnasio tiene su propio sistema, con su logo, clientes y datos separados.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>¿Para quién es GymAuth?</h2>
+  <div class="grid">
+    <div class="card">🏋️ Gimnasios</div>
+    <div class="card">💪 Entrenadores personales</div>
+    <div class="card">🏢 Boxes de CrossFit</div>
+    <div class="card">🔥 Studios Fitness</div>
+  </div>
+</section>
+
+<section style="text-align:center">
+  <h2>Empieza hoy</h2>
+  <p>
+    Crea tu gimnasio, invita a tus clientes y empieza a fidelizarlos automáticamente.
+  </p>
+  <button class="btn" onclick="location.href='register.html'">Crear mi gimnasio</button>
+</section>
+
+<footer>
+  GymAuth © 2026 — Plataforma de automatización fitness
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Ranking</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.table{
+    margin:40px;
+    background:#0b1220;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 2fr 2fr;
+    padding:15px 20px;
+    border-bottom:1px solid #111831;
+}
+
+.row.header{
+    background:#111831;
+    color:#9aa3c7;
+}
+.rank{
+    color:#3cffb0;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Ranking del Gym</h1>
+    <a href="/client/dashboard.html" style="color:#3cffb0;">← Volver</a>
+</div>
+
+<div class="table">
+    <div class="row header">
+        <div>#</div>
+        <div>Nombre</div>
+        <div>Progreso</div>
+    </div>
+
+    <div class="row">
+        <div class="rank">1</div>
+        <div>Ana Gómez</div>
+        <div>-8kg</div>
+    </div>
+
+    <div class="row">
+        <div class="rank">2</div>
+        <div>Juan Pérez</div>
+        <div>-6kg</div>
+    </div>
+
+    <div class="row">
+        <div class="rank">3</div>
+        <div>Carlos Ruiz</div>
+        <div>-4kg</div>
+    </div>
+</div>
+
+</body>
+</html>

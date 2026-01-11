@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Automatizaciones</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.section{
+    padding:40px;
+}
+
+.card{
+    background:#0b1220;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.card h3{
+    color:#3cffb0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Automatizaciones</h1>
+    <a href="/admin/dashboard.html" style="color:#3cffb0;">← Volver</a>
+</div>
+
+<div class="section">
+
+    <div class="card">
+        <div>
+            <h3>Recordatorios de asistencia</h3>
+            <p>Envía correos cuando un cliente no viene en 3 días</p>
+        </div>
+        <input type="checkbox" checked>
+    </div>
+
+    <div class="card">
+        <div>
+            <h3>Felicitaciones por progreso</h3>
+            <p>Cuando bajan peso o cumplen metas</p>
+        </div>
+        <input type="checkbox" checked>
+    </div>
+
+    <div class="card">
+        <div>
+            <h3>Clientes en riesgo</h3>
+            <p>Alertas al staff cuando alguien deja de venir</p>
+        </div>
+        <input type="checkbox">
+    </div>
+
+</div>
+
+</body>
+</html>

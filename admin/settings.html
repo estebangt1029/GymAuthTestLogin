@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>GymAuth | Configuración del Gym</title>
+
+<script src="/assets/js/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#05070f;
+    font-family:'Poppins', sans-serif;
+    color:white;
+}
+
+.header{
+    padding:25px 40px;
+    background:#0b1220;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.form{
+    padding:40px;
+    max-width:600px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    background:#111831;
+    border:none;
+    border-radius:8px;
+    color:white;
+}
+
+button{
+    padding:14px 30px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,#00f0ff,#3cffb0);
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Configuración del Gym</h1>
+    <a href="/admin/dashboard.html" style="color:#3cffb0;">← Volver</a>
+</div>
+
+<div class="form">
+    <input type="text" placeholder="Nombre del gym">
+    <input type="email" placeholder="Email de contacto">
+    <input type="text" placeholder="Horario">
+    <input type="text" placeholder="Mensaje automático para clientes">
+    <button>Guardar cambios</button>
+</div>
+
+</body>
+</html>
